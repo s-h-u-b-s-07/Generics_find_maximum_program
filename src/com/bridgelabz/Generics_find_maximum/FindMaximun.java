@@ -34,18 +34,22 @@ public class FindMaximun<E extends Comparable<E>> {
 
     public <E extends Comparable<E>> E getMax() {
         E max = (E) getMax(firstValue, secondValue, thirdValue, extraParamaters);
+        printMax(max);
         return max;
     }
 
+    public <E extends Comparable<E>> void printMax(E max) {
+        System.out.println("Maximum Value " + max);
+    }
+
+
     public static void main(String[] args) {
 
-        System.out.println("Maximum Value Of Integer:");
-        System.out.println(new FindMaximum(40, 10, 90, 100).getMax());
-        System.out.println("Maximum Value Of Flot:");
-        System.out.println(new FindMaximum(1.2f, 4.2f, 5.6f, 8.5f).getMax());
-        System.out.println("Maximum Value Of String:");
-        System.out.println(new FindMaximum("apple", "banana", "peach", "grapes").getMax());
+        new FindMaximum(40, 10, 90, 100).getMax();
+        new FindMaximum(1.2f, 4.2f, 5.6f, 8.5f).getMax();
+        new FindMaximum("apple", "banana", "peach", "grapes").getMax();
 
     }
 }
+
 
